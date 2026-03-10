@@ -3241,7 +3241,7 @@ class APIHelper {
               .codeUnits,
         )}",
         "Content-Type": 'application/json',
-      }}");
+      });
       final response = await http.post(
         Uri.parse('https://json.astrologyapi.com/v1/timezone_with_dst'),
         body: json.encode({"latitude": lat, "longitude": long}),

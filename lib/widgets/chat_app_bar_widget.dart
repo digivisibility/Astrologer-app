@@ -228,7 +228,7 @@ class _MyCustomAppBarState extends State<ChatAppBar> {
                 backpress();
               }
             } else {
-              print("else");
+              log('else');
             }
           },
         );
@@ -278,7 +278,7 @@ class _MyCustomAppBarState extends State<ChatAppBar> {
       chatController.isInChatScreen = false;
       global.getStorage.write('chatStartedAt', 0);
       await global.getStorage.save();
-      print("exit time:- ${global.getStorage.read('chatStartedAt')}");
+      log('exit time:- ${global.getStorage.read('chatStartedAt')}');
       chatController.update();
     } else {
       log('Failed to set Astrologer status to Online');
