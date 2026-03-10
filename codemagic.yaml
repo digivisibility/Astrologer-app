@@ -1,9 +1,62 @@
 workflows:
+  flutter-android-build:
+    name: Astrology Flutter Android Build
+    max_build_duration: 60
 
-  sample-workflow:
+    environment:
+      flutter: stable
+      java: 17
 
-    name: Codemagic Sample Workflow
+      vars:
+        PACKAGE_NAME: "com.example.astrologyapp"
 
-    max_build_duration: 120
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ~/.gradle/caches
+        - ~/.gradle/wrapper
 
-    instance_type: mac_mini_m2
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
+
+    scripts:
+      - name: Check Flutter version
+        script: |
+          flutter --version
+
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Analyze project
+        script: |
+          flutter analyze
+
+      - name: Run tests
+        script: |
+          flutter test
+
+      - name: Build Release APK
+        script: |
+          flutter build apk --release
+
+      - name: Build Android App Bundle
+        script: |
+          flutter build appbundle --release
+
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
