@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable, file_names
 
 import 'dart:async';
+import 'dart:developer';
 import 'package:astrowaypartner/constants/colorConst.dart';
 import 'package:astrowaypartner/controllers/Authentication/signup_controller.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -273,7 +274,7 @@ class _PoojaOrderScreen extends State<PoojaOrderScreen> {
   }
 
   Widget _buildImageSlider(List<String>? pujaImages) {
-    print("puja images-> ${pujaImages}");
+    log('puja images-> $pujaImages');
     if (pujaImages == null || pujaImages.isEmpty) {
       return Container(
         height: 20.h,
@@ -323,16 +324,13 @@ class _PoojaOrderScreen extends State<PoojaOrderScreen> {
 
     // Determine button text based on conditions
     String buttonText = "Start Puja";
-    Color buttonColor = COLORS().primaryColor;
     bool isEnabled = true;
 
     if (pujaLink == "Link will be available soon") {
       buttonText = "Starting Soon";
-      buttonColor = Colors.grey;
       isEnabled = false;
     } else if (pujaLink == "Incomplete Puja") {
       buttonText = "Incomplete Puja";
-      buttonColor = Colors.grey;
       isEnabled = false;
     }
 

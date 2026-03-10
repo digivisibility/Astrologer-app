@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use, unnecessary_null_comparison, non_constant_identifier_names, avoid_init_to_null
+// ignore_for_file: deprecated_member_use, unnecessary_null_comparison, non_constant_identifier_names, avoid_init_to_null, avoid_print
 
 import 'dart:async';
 import 'dart:convert';
@@ -887,7 +887,7 @@ class _LiveScreenState extends State<LiveScreen> {
                             setState(() {
                               mute = !mute;
                             });
-                            print("mute- ${mute}");
+                            log('mute- $mute');
                             agoraEngine.muteLocalAudioStream(mute);
                           },
                           child: Container(
@@ -1809,7 +1809,7 @@ class _LiveScreenState extends State<LiveScreen> {
           int remoteUId,
           UserOfflineReasonType reason,
         ) async {
-          print("user left");
+          log('user left');
           apiHelper.setAstrologerOnOffBusyline('Online');
           isImHost.value = false;
           homeController.getOnlineAstro(0); //no live

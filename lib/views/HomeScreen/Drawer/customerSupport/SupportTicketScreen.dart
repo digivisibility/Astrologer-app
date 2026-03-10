@@ -128,6 +128,7 @@ class _SupportTicketsScreenState extends State<SupportTicketsScreen> {
       top: false,
       child: Scaffold(
           appBar: MyCustomAppBar(
+            height: 80,
             backgroundColor: COLORS().primaryColor,
               iconData:  IconThemeData(color: COLORS().textColor),
               title:  Text("Support Tickets",

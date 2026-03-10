@@ -1,9 +1,48 @@
 workflows:
+  android-workflow:
+    name: Android Build
+    max_build_duration: 60
+    instance_type: mac_mini_m1
 
-  sample-workflow:
+    environment:
+      vars:
+        PACKAGE_NAME: "com.example.app"
+      java: 17
 
-    name: Codemagic Sample Workflow
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
 
-    max_build_duration: 120
+    cache:
+      cache_paths:
+        - ~/.gradle/caches
+        - ~/.gradle/wrapper
 
-    instance_type: mac_mini_m2
+    scripts:
+      - name: Install dependencies
+        script: |
+          ./gradlew dependencies
+
+      - name: Build APK
+        script: |
+          ./gradlew assembleRelease
+
+      - name: Build AAB
+        script: |
+          ./gradlew bundleRelease
+
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.aab
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true

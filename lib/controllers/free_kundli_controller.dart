@@ -675,7 +675,7 @@ class KundliController extends GetxController {
           await apiHelper
               .geoCoding(lat: latitude,long: longitude)
               .then((result) {
-                print("timezone:- ${result}");
+                print("timezone:- $result");
             if (result.status == "true") {
               // timeZone = double.parse(result.recordList['timezone'].toString());
               // geoCodingList = result.recordList;

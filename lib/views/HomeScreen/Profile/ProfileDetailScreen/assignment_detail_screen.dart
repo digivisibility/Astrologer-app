@@ -261,15 +261,25 @@ class AssignmentDetailScreen extends StatelessWidget {
     int totalFields = 5;
 
     if (global.user.foreignCountryCount != null &&
-        global.user.foreignCountryCount != '') completedFields++;
+        global.user.foreignCountryCount != '') {
+      completedFields++;
+    }
     if (global.user.currentlyWorkingJob != null &&
-        global.user.currentlyWorkingJob != '') completedFields++;
+        global.user.currentlyWorkingJob != '') {
+      completedFields++;
+    }
     if (global.user.goodQualityOfAstrologer != null &&
-        global.user.goodQualityOfAstrologer != '') completedFields++;
+        global.user.goodQualityOfAstrologer != '') {
+      completedFields++;
+    }
     if (global.user.biggestChallengeFaced != null &&
-        global.user.biggestChallengeFaced != '') completedFields++;
+        global.user.biggestChallengeFaced != '') {
+      completedFields++;
+    }
     if (global.user.repeatedQuestion != null &&
-        global.user.repeatedQuestion != '') completedFields++;
+        global.user.repeatedQuestion != '') {
+      completedFields++;
+    }
 
     double progress = completedFields / totalFields;
 
@@ -368,10 +378,12 @@ class AssignmentDetailScreen extends StatelessWidget {
   }
 
   String _getProgressMessage(double progress) {
-    if (progress >= 0.8)
+    if (progress >= 0.8) {
       return "Excellent! Your assignment details are almost complete.";
-    if (progress >= 0.5)
+    }
+    if (progress >= 0.5) {
       return "Good progress! Keep going to complete your assignment.";
+    }
     return "Let's complete your assignment details to get started.";
   }
 }

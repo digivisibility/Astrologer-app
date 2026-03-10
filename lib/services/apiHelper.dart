@@ -3234,8 +3234,8 @@ class APIHelper {
           "astrologyapiuser id- ${global.getSystemFlagValue(global.systemFlagNameList.astrologyApiUserId)}");
       print(
           "astrologyapiuser id- ${global.getSystemFlagValue(global.systemFlagNameList.astrologyApiKey)}");
-      print("${json.encode({"latitude": lat, "longitude": long})}");
-      print("${{
+      print(json.encode({"latitude": lat, "longitude": long}));
+      print({
         "authorization": "Basic ${base64.encode(
           "${global.getSystemFlagValue(global.systemFlagNameList.astrologyApiUserId)}:${global.getSystemFlagValue(global.systemFlagNameList.astrologyApiKey)}"
               .codeUnits,
@@ -3591,11 +3591,11 @@ class APIHelper {
           "puja_id": pojaid,
         }),
       );
-      print("${json.encode({
-            "astrologerId": global.user.id,
-            "userId": userid,
-            "puja_id": pojaid,
-          })}");
+      print(json.encode({
+        "astrologerId": global.user.id,
+        "userId": userid,
+        "puja_id": pojaid,
+      }));
       log('assignpujatoUserApi response is ${response.body}');
       dynamic recordList;
       global.showToast(message: json.decode(response.body)['message']);

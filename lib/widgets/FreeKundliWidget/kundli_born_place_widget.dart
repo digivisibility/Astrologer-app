@@ -125,7 +125,8 @@ class _KundliBornPlaceWidgetState extends State<KundliBornPlaceWidget> {
                         ),
                       ),
                     Text(
-                      "${widget.kundliController.pdfPriceData!.recordList![0].price!}",
+                      widget.kundliController.pdfPriceData!.recordList![0].price!
+                          .toString(),
                       style: Get.theme.textTheme.bodyMedium!.copyWith(
                         fontSize: 13.sp,
                         fontWeight: FontWeight.w400,
@@ -181,7 +182,8 @@ class _KundliBornPlaceWidgetState extends State<KundliBornPlaceWidget> {
                         ),
                       ),
                     Text(
-                      "${widget.kundliController.pdfPriceData!.recordList![1].price!}",
+                      widget.kundliController.pdfPriceData!.recordList![1].price!
+                          .toString(),
                       style: Get.theme.textTheme.bodyMedium!.copyWith(
                         fontSize: 13.sp,
                         fontWeight: FontWeight.w400,
@@ -237,7 +239,8 @@ class _KundliBornPlaceWidgetState extends State<KundliBornPlaceWidget> {
                         ),
                       ),
                     Text(
-                      "${widget.kundliController.pdfPriceData!.recordList![2].price!.toString()}",
+                      widget.kundliController.pdfPriceData!.recordList![2].price!
+                          .toString(),
                       style: Get.theme.textTheme.bodyMedium!.copyWith(
                         fontSize: 13.sp,
                         fontWeight: FontWeight.w400,

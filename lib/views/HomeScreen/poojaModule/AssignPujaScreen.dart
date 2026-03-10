@@ -70,7 +70,7 @@ class _MyAssignPujaScreenState extends State<AssignPujaScreen> {
                     itemCount: poojacontroller.custompoojalist!.length,
                     itemBuilder: (context, index) {
                       final puja = poojacontroller.custompoojalist![index];
-                      print("puja image;- ${puja.pujaImages?[0]}");
+                      log('puja image;- ${puja.pujaImages?[0]}');
 
                       final upcomingPujaList = poojacontroller
                           .custompoojalist![index].pujaStartDatetime!

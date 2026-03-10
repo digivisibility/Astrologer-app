@@ -8,7 +8,6 @@ import 'package:astrowaypartner/controllers/HomeController/productController.dar
 import 'package:astrowaypartner/controllers/HomeController/timer_controller.dart';
 import 'package:astrowaypartner/controllers/HomeController/wallet_controller.dart';
 import 'package:astrowaypartner/services/apiHelper.dart';
-import 'package:astrowaypartner/utils/config.dart';
 import 'package:astrowaypartner/utils/global.dart' as global;
 import 'package:astrowaypartner/views/HomeScreen/products/productScreen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -178,18 +177,17 @@ class _MyCustomAppBarState extends State<ChatAppBar> {
   Widget status() {
     return GetBuilder<ChattimerController>(
       builder: (chattimercontroller) {
-        print("${chattimercontroller.newIsStartTimer}");
-        print("widget.flagid :- ${widget.flagid}");
+        log('${chattimercontroller.newIsStartTimer}');
+        log('widget.flagid :- ${widget.flagid}');
         if (chattimercontroller.newIsStartTimer == true) {
-          print(
-              "chatStatedAt fromstatus ${global.getStorage.read('chatStartedAt')}");
+          log('chatStatedAt fromstatus ${global.getStorage.read('chatStartedAt')}');
           if (global.getStorage.read('chatStartedAt') == null ||
               global.getStorage.read('chatStartedAt').toString() == "0") {
             final timestamp = DateTime.now().millisecondsSinceEpoch;
             global.getStorage.write('chatStartedAt', timestamp);
           }
         } else {
-          print("User not yet join");
+          log('User not yet join');
         }
         final now = DateTime.now().millisecondsSinceEpoch;
         final remainingMillis = chattimercontroller.endTime - now;
@@ -213,10 +211,9 @@ class _MyCustomAppBarState extends State<ChatAppBar> {
             );
           },
           onEnd: () {
-            print("onEnd");
+            log('onEnd');
 
-            print(
-                "chattimercontroller.newIsStartTimer:- ${chattimercontroller.newIsStartTimer}");
+            log('chattimercontroller.newIsStartTimer:- ${chattimercontroller.newIsStartTimer}');
             if (chattimercontroller.newIsStartTimer) {
               chattimercontroller.newIsStartTimer = false;
               chattimercontroller.update();

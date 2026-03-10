@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_print
 
 import 'dart:convert';
-import 'dart:math';
 import 'package:astrowaypartner/controllers/Authentication/signup_controller.dart';
 import 'package:astrowaypartner/controllers/HomeController/home_controller.dart';
 import 'package:astrowaypartner/controllers/HomeController/wallet_controller.dart';
@@ -52,7 +51,7 @@ class SplashController extends GetxController {
   String? version;
   String currentLanguageCode = 'en';
 
-  void _handleNotificationNavigation(Map<String, dynamic> chatData) async {
+  void handleNotificationNavigation(Map<String, dynamic> chatData) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(ConstantsKeys.CHATDATA, '');
 

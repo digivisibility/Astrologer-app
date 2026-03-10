@@ -258,7 +258,7 @@ class KundliMatchingController extends GetxController {
         latitude: girl_lat,
         longitude: girl_long,
         match_type: selectedDirection,
-        timezone: girl_timezone??5.5,
+        timezone: girl_timezone,
         forMatch: alreadycreatedfemale,
       )
     ];
@@ -328,7 +328,7 @@ class KundliMatchingController extends GetxController {
               } else {
 
                 Map<String, dynamic> map = result;
-                log("south- ${map}");
+                log("south- $map");
                 southkundliMatchDetailList =
                     SouthKundaliMatchingModel.fromJson(map);
                 await Future.delayed(const Duration(milliseconds: 50));
