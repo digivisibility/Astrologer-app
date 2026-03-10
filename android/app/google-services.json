@@ -1,0 +1,259 @@
+{
+  "project_info": {
+    "project_number": "381086298991",
+    "firebase_url": "https://astroway-diploy-default-rtdb.firebaseio.com",
+    "project_id": "astroway-diploy",
+    "storage_bucket": "astagiploy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381086298921:android:f21e5c9ac62e274",
+        "android_client_info": {
+          "package_name": "com.astrowaydiploy.astrologer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38106621-e2kjje0311o3qv6b2and.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaloy.astrologer",
+            "certificate_hash": "da4f2070bd8e0caa2b64d5e81a16df1"
+          }
+        },
+        {
+          "client_id": "3810806621-ila91ogoumfejke96gpt0ov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astroiploy.astrologer",
+            "certificate_hash": "db6193f649d4ce69247d5eba33fe1df9da7"
+          }
+        },
+        {
+          "client_id": "38108621-j99bmq2pcb1h3330mgbdmcrl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowayiploy.astrologer",
+            "certificate_hash": "d627449632da0eebf39aa8d3ce575aea"
+          }
+        },
+        {
+          "client_id": "38108620621-vkh8spagv7kh5h2bbqav8pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNWnN2vK3eTwa1yiFxaYsxts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381086206621-vkh8spagv7k3a2bbqav8pu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "381086206621-5q2sj6tp4ph9nhshiia.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.astrowaydiploy.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381086621:android:f82a6af24fbd32e274",
+        "android_client_info": {
+          "package_name": "com.astrowaydiploy.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381086206621-6ur78mhcj3vco75meu5dbi4vsifu.apps.googusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaploy.user",
+            "certificate_hash": "2d4dbeb3189c60e335907bee12f7581"
+          }
+        },
+        {
+          "client_id": "3810862021-kf1djh7ag5rckrtkio4rdu4nfl00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaydiploy.user",
+            "certificate_hash": "beeec967cb89dedc987fbfe0e42cb75e676"
+          }
+        },
+        {
+          "client_id": "38106621-rr7dbj5k2af57qachorvmc8pq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowiploy.user",
+            "certificate_hash": "179799039a470cc61f7753950fb9e7aa6"
+          }
+        },
+        {
+          "client_id": "3810862066iiafav8pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNWnN2va1L5yiFxaYsxts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38108620662n7m1v0pagv7kh5h3a2bbqav8pu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "381086206621-5q2sjrv3l4ph9nhshiia.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.astrowaydiploy.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381086621:android:cae9fd875c58d32e274",
+        "android_client_info": {
+          "package_name": "com.astrowaypro.astrologer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381086206621-7uqjigon7gh6vticmf746avdv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.astrologer",
+            "certificate_hash": "a214228058a74ea9515e6a30546295857fd"
+          }
+        },
+        {
+          "client_id": "381086206621-gjq6a7k7iuin27t5aou23d2sofr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.astrologer",
+            "certificate_hash": "7056f50d92e5c3e18ad43ee17be7046f"
+          }
+        },
+        {
+          "client_id": "381086206621-i18h23ctas73nnv4ba3imggkrfh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.astrologer",
+            "certificate_hash": "d6275256e449632da0eec58bf39aa8d3ce575aea"
+          }
+        },
+        {
+          "client_id": "381086206621-krbto4q3s3cj965029kkbbfvf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.astrologer",
+            "certificate_hash": "656380b913c262f7c345734c7eff39969731"
+          }
+        },
+        {
+          "client_id": "381086206621-vkh8s7n7m7kh5h3a2bbqav8pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNWnN2vh3eTwa1L5yiFxaYsxts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381086206621-vkh8s7ngv7kh5h3a2bbqav8pu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "381086206621-5q2sj6isr34trv3l4ph9nhshiia.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.astroiploy.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381086206621:android:cf5b88bba71432e274",
+        "android_client_info": {
+          "package_name": "com.astrowaypro.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381086206621-3unqnvi8k5qhjvu6b993k355h5gn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.user",
+            "certificate_hash": "179799039a470cc6f561f7753950fb9e7aa6"
+          }
+        },
+        {
+          "client_id": "381086206621.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.user",
+            "certificate_hash": "beeec9672d5cb89dedcae7fbfe0e42cb75e676"
+          }
+        },
+        {
+          "client_id": "381086206621-tn8n95tu9m3bpjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrowaypro.user",
+            "certificate_hash": "2d4dbeb3189c60e33c07b5907bee12f7581"
+          }
+        },
+        {
+          "client_id": "381086206621-vkh8s7gv7kh5h3a2bbqav8pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNWnN2vKDFTwa1L5yiFxaYsxts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381086206621-vkh8s77kh5h3a2bbqav8pu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "381086206621-5q2sj6tpev3l4ph9nhshiia.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.astrowaydiploy.user"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
