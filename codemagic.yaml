@@ -1,13 +1,20 @@
 workflows:
   flutter-android-build:
-    name: Android Build
+    name: Astrology Flutter Android Build
     max_build_duration: 60
-    instance_type: mac_mini_m1
 
     environment:
-      vars:
-        PACKAGE_NAME: "com.example.app"
+      flutter: stable
       java: 17
+
+      vars:
+        PACKAGE_NAME: "com.example.astrologyapp"
+
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ~/.gradle/caches
+        - ~/.gradle/wrapper
 
     triggering:
       events:
@@ -17,27 +24,34 @@ workflows:
           include: true
           source: true
 
-    cache:
-      cache_paths:
-        - ~/.gradle/caches
-        - ~/.gradle/wrapper
-
     scripts:
-      - name: Install dependencies
+      - name: Check Flutter version
         script: |
-          ./gradlew dependencies
+          flutter --version
 
-      - name: Build APK
+      - name: Get Flutter packages
         script: |
-          ./gradlew assembleRelease
+          flutter pub get
 
-      - name: Build AAB
+      - name: Analyze project
         script: |
-          ./gradlew bundleRelease
+          flutter analyze
+
+      - name: Run tests
+        script: |
+          flutter test
+
+      - name: Build Release APK
+        script: |
+          flutter build apk --release
+
+      - name: Build Android App Bundle
+        script: |
+          flutter build appbundle --release
 
     artifacts:
-      - app/build/outputs/**/*.apk
-      - app/build/outputs/**/*.aab
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
 
     publishing:
       email:
