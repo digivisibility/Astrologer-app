@@ -76,7 +76,7 @@ class MockFirebasePlatform extends FirebasePlatform {
 }
 
 class MockFirebaseApp extends FirebaseAppPlatform {
-  MockFirebaseApp(String name, FirebaseOptions options) : super(name, options);
+  MockFirebaseApp(super.name, super.options);
 }
 
 void setupMocks() {
