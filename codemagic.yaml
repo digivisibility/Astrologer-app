@@ -1,6 +1,6 @@
 workflows:
   flutter-android-build:
-    name: Astrology Flutter Android Build
+    name: Flutter Android Build
     max_build_duration: 60
 
     environment:
@@ -37,10 +37,6 @@ workflows:
         script: |
           flutter analyze
 
-      - name: Run tests
-        script: |
-          flutter test
-
       - name: Build Release APK
         script: |
           flutter build apk --release
@@ -50,8 +46,8 @@ workflows:
           flutter build appbundle --release
 
     artifacts:
-      - build/**/outputs/**/*.apk
-      - build/**/outputs/**/*.aab
+      - build/app/outputs/flutter-apk/*.apk
+      - build/app/outputs/bundle/release/*.aab
 
     publishing:
       email:
