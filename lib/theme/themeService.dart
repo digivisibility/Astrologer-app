@@ -7,6 +7,10 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class ThemeService {
+  static final ThemeService _instance = ThemeService._internal();
+  factory ThemeService() => _instance;
+  ThemeService._internal();
+
   final _box = GetStorage();
   final _key = 'isDarkMode';
 
