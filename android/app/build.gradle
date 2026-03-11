@@ -28,6 +28,7 @@ if (keystorePropertiesFile.exists()) {
    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 android {
+    ndkVersion "25.1.8937393"
     compileSdkVersion 35
       packagingOptions {
          pickFirst 'lib/**/libaosl.so'
