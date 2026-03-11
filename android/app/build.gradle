@@ -5,6 +5,9 @@ plugins {
     id "com.google.gms.google-services"
 }
 
+import java.util.Properties
+
+// Load Flutter version code and name
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -15,6 +18,7 @@ if (localPropertiesFile.exists()) {
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode') ?: '5'
 def flutterVersionName = localProperties.getProperty('flutter.versionName') ?: '1.0.5'
 
+// Load keystore properties
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
@@ -22,22 +26,10 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    ndkVersion "25.1.8937393"
     compileSdkVersion 35
+    ndkVersion "25.1.8937393"
 
-    packagingOptions {
-        pickFirst 'lib/**/libaosl.so'
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-        coreLibraryDesugaringEnabled true
-    }
-
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
+    namespace 'com.astrowaypro.astrologer'
 
     defaultConfig {
         applicationId "com.astrowaypro.astrologer"
@@ -61,6 +53,20 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        pickFirst 'lib/**/libaosl.so'
+    }
+
     buildTypes {
         release {
             signingConfig signingConfigs.release
@@ -68,9 +74,11 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+        }
     }
-
-    namespace 'com.astrowaypro.astrologer'
 }
 
 flutter {
@@ -78,23 +86,27 @@ flutter {
 }
 
 dependencies {
+    // Agora library
     api 'io.agora.infra:aosl:1.2.13'
 
-    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    // Firebase
+    implementation platform("com.google.firebase:firebase-bom:33.1.0")
     implementation('com.google.firebase:firebase-auth') {
         exclude module: "play-services-safetynet"
     }
 
+    // MultiDex
     implementation 'androidx.multidex:multidex:2.0.1'
 
+    // Desugaring for Java 8 features
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+
+    // OneSignal
     implementation 'com.onesignal:OneSignal:5.1.1'
 }
 
 // Apply Google services plugin
 apply plugin: 'com.google.gms.google-services'
 
-// Increase memory for R8 directly (optional, extra safety)
-tasks.withType(com.android.build.gradle.internal.tasks.R8Task).configureEach {
-    jvmArgs = ['-Xmx4g']
-}
+// ⚠️ IMPORTANT: Do NOT attempt to set JVM args for R8 directly here.
+// Gradle JVM args in gradle.properties control R8 memory.
